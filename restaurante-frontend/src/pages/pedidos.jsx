@@ -49,12 +49,7 @@ try {
 const { menus } = useContext(MenuContext);
 
 const handleAgregar = (menu) => {
-if(nombre && correo && telefono){
-agregarPedido(menu)
-setError('');
-} else {
-setError('Rellenar los campos del formulario para poder ordenar')
-}
+  agregarPedido(menu)
 }
 const handleQuitar = (id) => {
 quitarPedido(id)
@@ -63,38 +58,6 @@ quitarPedido(id)
 return (
 <>
   <div>
-    <h2>Formulario de Cliente</h2>
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="nombre">Nombre:</label>
-        <input
-          type="text"
-          id="nombre"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="correo">Correo:</label>
-        <input
-          type="email"
-          id="correo"
-          value={correo}
-          onChange={(e) => setCorreo(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="telefono">Teléfono:</label>
-        <input
-          type="tel"
-          id="telefono"
-          value={telefono}
-          onChange={(e) => setTelefono(e.target.value)}
-        />
-      </div>
-      <button type="submit">Ordenar</button>
-    </form>
-    {error && <p style={{color:'red'}}>{error}</p>}
   </div>
   <div>
     <hr />

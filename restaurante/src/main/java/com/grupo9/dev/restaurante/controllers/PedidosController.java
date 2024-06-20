@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.grupo9.dev.restaurante.models.PedidosModel;
-import com.grupo9.dev.restaurante.repositories.ClientRepository;
-import com.grupo9.dev.restaurante.repositories.PedidosRepository;
 import com.grupo9.dev.restaurante.services.PedidosService;
 
 @RestController

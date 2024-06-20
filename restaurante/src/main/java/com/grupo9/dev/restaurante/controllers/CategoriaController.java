@@ -20,10 +20,11 @@ public class CategoriaController {
 	
 	@GetMapping()
 	public ArrayList<CategoriasModel> ObtenerCategorias(){
-		return categoriaservice.obtenerClientes();
+		return categoriaservice.obtenerCategoria();
 	}
 	@PostMapping
 	public CategoriasModel guardarCategoria(@RequestBody CategoriasModel Categoria) {
 		return this.categoriaservice.guardarCategoria(Categoria);
 	}
+	
 }

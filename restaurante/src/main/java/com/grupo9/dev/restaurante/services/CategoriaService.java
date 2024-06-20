@@ -14,7 +14,7 @@ public class CategoriaService {
 	@Autowired
 	CategoriasRepository categoriarepository;
 	
-	public ArrayList<CategoriasModel> obtenerClientes(){
+	public ArrayList<CategoriasModel> obtenerCategoria(){
 		return (ArrayList<CategoriasModel>) categoriarepository.findAll();
 	}
 	public CategoriasModel guardarCategoria(CategoriasModel categoria) {
